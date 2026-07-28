@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frank Verstraete — Quantum Physics</title>
+<meta name="description" content="Frank Verstraete, Leigh Trapnell Professor of Quantum Physics at the University of Cambridge and professor of physics at Ghent University. A founder of the field of tensor networks: PEPS, MPO, cMPS, TDVP and the mathematics of quantum many-body physics.">
+<style>
+  :root{
+    --ink:#1a1c22; --paper:#fdfcf9; --muted:#5c6066; --accent:#0f4c81;
+    --rule:#e3e0d8; --card:#ffffff;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family: Georgia, 'Times New Roman', serif;
+    background:var(--paper); color:var(--ink);
+    line-height:1.65; font-size:17px;
+  }
+  .sans{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+
+  header{border-bottom:1px solid var(--rule); padding:20px 0;}
+  header .wrap{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;}
+  .brand{font-size:1.15rem; letter-spacing:.02em;}
+  nav a{margin-left:1.4em; font-size:.92rem;}
+  nav a.booklink{color:#8a2f11; font-style:italic;}
+
+  .hero{padding:64px 0 48px;}
+  .hero h1{font-size:2.6rem; font-weight:normal; letter-spacing:-.01em; margin-bottom:.35em;}
+  .hero .role{color:var(--muted); font-size:1.05rem; max-width:44em;}
+  .hero .thesis{
+    margin-top:1.6em; font-size:1.35rem; line-height:1.5; max-width:30em;
+    border-left:3px solid var(--accent); padding-left:1em;
+  }
+  .hero .thesis em{font-style:italic;}
+
+  section{padding:44px 0; border-top:1px solid var(--rule);}
+  h2{font-weight:normal; font-size:1.6rem; margin-bottom:1em; letter-spacing:.01em;}
+  .lede{max-width:44em; margin-bottom:1.2em;}
+  .lede + .lede{margin-top:-0.2em;}
+
+  .themes{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px; margin-top:8px;}
+  .theme h3{font-size:1.05rem; margin-bottom:.4em; font-weight:bold;}
+  .theme p{font-size:.95rem; color:#33363c;}
+  .inventions{display:flex; flex-wrap:wrap; gap:10px;}
+  .inventions span{
+    border:1px solid var(--accent); color:var(--accent); border-radius:2px;
+    padding:.35em .75em; font-size:.85rem; background:#fff;
+  }
+
+  .papers{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:22px;}
+  .paper{
+    background:var(--card); border:1px solid var(--rule); border-radius:3px;
+    overflow:hidden; display:flex; flex-direction:column;
+    box-shadow:0 1px 3px rgba(20,24,40,.06);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .paper:hover{transform:translateY(-3px); box-shadow:0 6px 18px rgba(20,24,40,.10);}
+  .thumb{
+    position:relative; aspect-ratio:8.5/6.2; background:#fff;
+    border-bottom:1px solid var(--rule); overflow:hidden;
+  }
+  .thumb img{width:100%; height:100%; object-fit:cover; object-position:top; display:block;}
+  .thumb .fallback{
+    position:absolute; inset:0; padding:14px 14px 0; background:
+      linear-gradient(#fff, #fbfaf6);
+  }
+  .fallback .ft{font-size:.72rem; line-height:1.3; text-align:center; padding:0 4px; color:#222;}
+  .fallback .fa{font-size:.58rem; text-align:center; color:#777; margin-top:5px;}
+  .fallback .lines{margin-top:10px;}
+  .fallback .lines span{display:block; height:3px; background:#e9e6de; margin:4px 8px; border-radius:2px;}
+  .pm{padding:12px 14px 14px;}
+  .pm .pt{font-size:.9rem; line-height:1.35; font-weight:bold;}
+  .pm .pv{font-size:.78rem; color:var(--muted); margin-top:.35em;}
+  .pm .pn{font-size:.82rem; margin-top:.5em; font-style:italic; color:#3a3d44;}
+  .pm .pl{font-size:.78rem; margin-top:.55em;}
+
+  .bookband{
+    background:#14202b; color:#f4efe6; border-top:none;
+  }
+  .bookband .wrap{display:flex; gap:36px; align-items:center; flex-wrap:wrap; padding-top:10px; padding-bottom:10px;}
+  .bookband .cover{
+    width:150px; min-width:150px; aspect-ratio:2/3; background:#22374a;
+    border:1px solid #3d5266; border-radius:2px; display:flex; align-items:center;
+    justify-content:center; text-align:center; padding:14px; font-size:.8rem; line-height:1.4;
+    color:#cfe0ee; box-shadow:6px 8px 0 rgba(0,0,0,.25);
+  }
+  .bookband .cover img{width:100%; height:100%; object-fit:cover;}
+  .bookband h2{color:#fff; border:none; margin-bottom:.4em;}
+  .bookband p{max-width:36em; color:#d9d2c4;}
+  .bookband .cta{
+    display:inline-block; margin-top:1.1em; padding:.55em 1.1em;
+    border:1px solid #c8a15a; color:#e8c78a; border-radius:2px; font-size:.95rem;
+  }
+  .bookband .cta:hover{background:#c8a15a; color:#14202b; text-decoration:none;}
+
+  .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:32px;}
+  ul.plain{list-style:none;}
+  ul.plain li{margin-bottom:.55em; font-size:.97rem;}
+  .mutedline{color:var(--muted); font-size:.9rem;}
+
+  footer{border-top:1px solid var(--rule); padding:28px 0 48px; color:var(--muted); font-size:.85rem;}
+  @media (max-width:640px){ .hero h1{font-size:2rem;} .hero .thesis{font-size:1.15rem;} }
+</style>
+</head>
+<body>
+
+<header class="sans">
+  <div class="wrap">
+    <div class="brand">Frank Verstraete</div>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#papers">Papers</a>
+      <a href="#contact">Contact</a>
+      <a class="booklink" href="book/">The Book</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Frank Verstraete</h1>
+    <p class="role sans">
+      Leigh Trapnell Professor of Quantum Physics, Department of Applied Mathematics and
+      Theoretical Physics, University of Cambridge &middot; Professor of Physics, Ghent University
+    </p>
+    <p class="thesis">
+      Twenty years ago, with Ignacio Cirac, I founded what has become the research field of
+      <em>tensor networks</em>: the language in which quantum many-body physics turns out to
+      be — of all things — linear algebra.
+    </p>
+    <p class="role sans" style="margin-top:1.2em; font-style:italic;">
+      &ldquo;a deeper glance / rewrites the line&rdquo;
+    </p>
+  </div>
+</div>
+
+<section id="tensornetworks">
+  <div class="wrap">
+    <h2>Tensor networks</h2>
+    <p class="lede">
+      Here is the trouble with quantum mechanics: to describe a handful of particles exactly,
+      you need more numbers than there are atoms in the universe. That should be the end of
+      the story — and yet your table is solid, the sun shines, and your laptop's transistors
+      switch faithfully many billions of times per second. Nature clearly does not bother with
+      all those numbers. The reason is entanglement: of that unimaginably vast space of
+      possibilities, nature only ever visits a tiny corner, and <em>tensor networks</em> are
+      the coordinates of that corner. What began as one numerical trick is now a research
+      field of its own — the common language of computational quantum physics, quantum
+      information and much of condensed matter theory, and the yardstick against which
+      quantum computers are measured.
+    </p>
+    <p class="lede">
+      Much of the basic vocabulary of that field first appeared in my papers:
+    </p>
+    <div class="inventions sans">
+      <span>Projected entangled pair states (PEPS)</span>
+      <span>Matrix product operators (MPO)</span>
+      <span>Matrix product density operators</span>
+      <span>Continuous matrix product states</span>
+      <span>Continuous entanglement renormalization</span>
+      <span>Fermionic &amp; graded tensor networks</span>
+      <span>Projected entangled pair operators (PEPO)</span>
+      <span>Tangent-space methods &amp; TDVP</span>
+      <span>Faithfulness of matrix product states</span>
+      <span>MPO symmetry algebras &amp; dualities</span>
+    </div>
+    <p class="lede" style="margin-top:1.4em;">
+      Tensor networks are now leaving the seminar room. They are how one simulates, verifies
+      and — embarrassingly often — outperforms near-term quantum hardware, and how the
+      many-body problems of chemistry and materials get compressed to something a computer,
+      classical or quantum, can actually hold. I am working on taking this technology into
+      industry; if that is the conversation you want to have,
+      <a href="#contact">write to me</a>.
+    </p>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <h2>Research</h2>
+    <p class="lede">
+      I work on the interface between quantum information theory and quantum many-body
+      physics. The recurring theme — colleagues would say the recurring joke — is the
+      reformulation of seemingly intractable problems in quantum physics as problems in
+      linear algebra. Call it algebracadabra. The feature of quantum mechanics that makes
+      many-body problems hard, entanglement, is precisely the feature that, once understood,
+      makes them tractable. And no, human intuition is not much help here; it is, as we put
+      it in the book, a terrible guide in physics. Mathematics is the better one.
+    </p>
+    <div class="themes">
+      <div class="theme">
+        <h3>Entanglement</h3>
+        <p>
+          Entanglement as the unifying language for strongly correlated quantum systems.
+          This started with a classification problem — in how many ways can four qubits be
+          entangled? — which turned out to be a question posed by Le Paige in 1881 and
+          advanced by Segre in 1922. It resisted invariant theory; it fell to linear algebra.
+        </p>
+      </div>
+      <div class="theme">
+        <h3>Variational physics</h3>
+        <p>
+          Physics on the manifold of matrix product states and PEPS: faithfulness theorems,
+          matrix product operators, continuous MPS for quantum fields, and the tangent-space
+          methods, in which excitations, real-time dynamics and optimization are all
+          statements about tangent vectors.
+        </p>
+      </div>
+      <div class="theme">
+        <h3>The algebra of the tensors</h3>
+        <p>
+          The local tensor as an object of study in its own right: a single small tensor repeated
+          across a lattice already fixes the global physics — fermionic statistics, topological
+          order, which symmetries can act. This leads to graded tensor networks, matrix product
+          operator algebras, dualities, and most recently the question of
+          <em>what is the group of a quantum group</em>.
+        </p>
+      </div>
+      <div class="theme">
+        <h3>Quantum computation</h3>
+        <p>
+          Quantum computation by dissipation, quantum circuits for integrable systems,
+          and the quantum Metropolis algorithm: what a quantum computer is actually good for
+          when the problem is a many-body Hamiltonian.
+        </p>
+      </div>
+    </div>
+    <p class="mutedline sans" style="margin-top:2em;">
+      My group works between Cambridge and Ghent — see
+      <a href="https://quantumghent.github.io/">QuantumGroup@UGent</a>.
+    </p>
+  </div>
+</section>
+
+<section id="papers">
+  <div class="wrap">
+    <h2>Selected papers</h2>
+    <div class="papers sans">
+
+      <div class="paper">
+        <div class="thumb">
+          <div class="fallback"><div class="ft">Four qubits can be entangled in nine different ways</div><div class="fa">Verstraete, Dehaene, De Moor, Verschelde</div><div class="lines"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+          <img src="assets/papers/fourqubits.png" alt="" onerror="this.remove()">
+        </div>
+        <div class="pm">
+          <div class="pt">Four qubits can be entangled in nine different ways</div>
+          <div class="pv">Phys. Rev. A 65, 052112 (2002)</div>
+          <div class="pn">A problem from 1881, solved by turning it into linear algebra.</div>
+          <div class="pl"><a href="https://arxiv.org/abs/quant-ph/0109033">arXiv:quant-ph/0109033</a></div>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="thumb">
+          <div class="fallback"><div class="ft">Renormalization algorithms for quantum many-body systems in two and higher dimensions</div><div class="fa">Verstraete, Cirac</div><div class="lines"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+          <img src="assets/papers/peps.png" alt="" onerror="this.remove()">
+        </div>
+        <div class="pm">
+          <div class="pt">Renormalization algorithms in two and higher dimensions</div>
+          <div class="pv">arXiv preprint (2004)</div>
+          <div class="pn">The PEPS paper. Never formally published; cited a few thousand times anyway.</div>
+          <div class="pl"><a href="https://arxiv.org/abs/cond-mat/0407066">arXiv:cond-mat/0407066</a></div>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="thumb">
+          <div class="fallback"><div class="ft">Matrix product states represent ground states faithfully</div><div class="fa">Verstraete, Cirac</div><div class="lines"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+          <img src="assets/papers/faithful.png" alt="" onerror="this.remove()">
+        </div>
+        <div class="pm">
+          <div class="pt">Matrix product states represent ground states faithfully</div>
+          <div class="pv">Phys. Rev. B 73, 094423 (2006)</div>
+          <div class="pn">Why DMRG works: a rigorous justification.</div>
+          <div class="pl"><a href="https://arxiv.org/abs/cond-mat/0505140">arXiv:cond-mat/0505140</a></div>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="thumb">
+          <div class="fallback"><div class="ft">Quantum computation and quantum-state engineering driven by dissipation</div><div class="fa">Verstraete, Wolf, Cirac</div><div class="lines"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+          <img src="assets/papers/dissipation.png" alt="" onerror="this.remove()">
+        </div>
+        <div class="pm">
+          <div class="pt">Quantum computation driven by dissipation</div>
+          <div class="pv">Nature Physics 5, 633 (2009)</div>
+          <div class="pn">Noise, usually the enemy, promoted to computational resource.</div>
+          <div class="pl"><a href="https://arxiv.org/abs/0803.1447">arXiv:0803.1447</a></div>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="thumb">
+          <div class="fallback"><div class="ft">Continuous matrix product states for quantum fields</div><div class="fa">Verstraete, Cirac</div><div class="lines"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+          <img src="assets/papers/cmps.png" alt="" onerror="this.remove()">
+        </div>
+        <div class="pm">
+          <div class="pt">Continuous matrix product states for quantum fields</div>
+          <div class="pv">Phys. Rev. Lett. 104, 190405 (2010)</div>
+          <div class="pn">Tensor networks without the lattice.</div>
+          <div class="pl"><a href="https://arxiv.org/abs/1002.1824">arXiv:1002.1824</a></div>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="thumb">
+          <div class="fallback"><div class="ft">Time-dependent variational principle for quantum lattices</div><div class="fa">Haegeman, Cirac, Osborne, Pižorn, Verschelde, Verstraete</div><div class="lines"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+          <img src="assets/papers/tdvp.png" alt="" onerror="this.remove()">
+        </div>
+        <div class="pm">
+          <div class="pt">Time-dependent variational principle for quantum lattices</div>
+          <div class="pv">Phys. Rev. Lett. 107, 070601 (2011)</div>
+          <div class="pn">Dynamics as geometry: evolution projected onto the tangent space.</div>
+          <div class="pl"><a href="https://arxiv.org/abs/1103.0936">arXiv:1103.0936</a></div>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="thumb">
+          <div class="fallback"><div class="ft">Characterizing topological order with matrix product operators</div><div class="fa">Şahinoğlu, Williamson, Bultinck, Mariën, Haegeman, Schuch, Verstraete</div><div class="lines"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+          <img src="assets/papers/mpo.png" alt="" onerror="this.remove()">
+        </div>
+        <div class="pm">
+          <div class="pt">Characterizing topological order with matrix product operators</div>
+          <div class="pv">Annales Henri Poincaré 22, 563 (2021)</div>
+          <div class="pn">Topological order read off from the algebra of the tensors.</div>
+          <div class="pl"><a href="https://arxiv.org/abs/1409.2150">arXiv:1409.2150</a></div>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="thumb">
+          <div class="fallback"><div class="ft">Dualities in one-dimensional quantum lattice models: symmetric Hamiltonians and matrix product operator intertwiners</div><div class="fa">Lootens, Delcamp, Ortiz, Verstraete</div><div class="lines"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+          <img src="assets/papers/dualities.png" alt="" onerror="this.remove()">
+        </div>
+        <div class="pm">
+          <div class="pt">Dualities in one-dimensional quantum lattice models</div>
+          <div class="pv">PRX Quantum 4, 020357 (2023)</div>
+          <div class="pn">Kramers–Wannier and its relatives, as explicit matrix product operators.</div>
+          <div class="pl"><a href="https://arxiv.org/abs/2112.09091">arXiv:2112.09091</a></div>
+        </div>
+      </div>
+
+    </div>
+    <p class="mutedline sans" style="margin-top:1.6em;">
+      Full list on <a href="https://arxiv.org/a/verstraete_f_1">arXiv</a> and
+      <a href="https://scholar.google.com/citations?user=wBrDPIEAAAAJ">Google Scholar</a>.
+    </p>
+  </div>
+</section>
+
+<section class="bookband" id="book">
+  <div class="wrap">
+    <div class="cover">
+      <img src="assets/covers/english.jpg" alt="Why Nobody Understands Quantum Physics — cover" onerror="this.remove(); this.parentNode.textContent='Why Nobody Understands Quantum Physics';">
+    </div>
+    <div>
+      <h2>Why Nobody Understands Quantum Physics</h2>
+      <p>
+        With Céline Broeckaert I wrote a book about the strangest and most successful theory
+        we have — for everyone who was ever told it was beyond them. It isn't. The complexity
+        of quantum physics must never be used to mystify it. The book is now published in
+        eight languages, and Waterstones selected it among the best popular science books
+        of 2025.
+      </p>
+      <p class="sans" style="margin-top:.9em; font-size:.9rem; color:#b8ad99; font-style:italic;">
+        &ldquo;Frank thinks and speaks in mathematics; I think and speak in words.&rdquo;
+        — Céline, in the writer's foreword
+      </p>
+      <a class="cta sans" href="book/">Visit the book site &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Short vita</h2>
+    <div class="cols sans">
+      <div>
+        <ul class="plain">
+          <li><strong>2022–</strong> &nbsp;Leigh Trapnell Professor of Quantum Physics, University of Cambridge</li>
+          <li><strong>2012–</strong> &nbsp;Professor of Physics, Ghent University (Odysseus grant, FWO)</li>
+          <li><strong>2006–2012</strong> &nbsp;Professor and chair of theoretical quantum nanophysics, University of Vienna</li>
+          <li><strong>2004–2006</strong> &nbsp;Postdoc, Caltech (group of John Preskill)</li>
+          <li><strong>2002–2004</strong> &nbsp;Postdoc, Max Planck Institute of Quantum Optics (group of Ignacio Cirac)</li>
+          <li><strong>2002</strong> &nbsp;PhD, KU Leuven — <em>A study of entanglement in quantum information theory</em></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="plain">
+          <li>Francqui Prize (2018)</li>
+          <li>Lieben Prize (2009)</li>
+          <li>Hermann Kümmel Early Achievement Award in Many-Body Physics</li>
+          <li>ERC grants (2009, 2015, 2023)</li>
+          <li>Distinguished Visiting Research Chair, Perimeter Institute</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="cols sans">
+      <div>
+        <p><strong>Cambridge</strong><br>
+        DAMTP, Centre for Mathematical Sciences<br>
+        Wilberforce Road, Cambridge CB3 0WA, UK<br>
+        <a href="mailto:fv285@cam.ac.uk">fv285@cam.ac.uk</a></p>
+      </div>
+      <div>
+        <p><strong>Ghent</strong><br>
+        Department of Physics and Astronomy<br>
+        Krijgslaan 281, 9000 Gent, Belgium<br>
+        <a href="mailto:frank.verstraete@ugent.be">frank.verstraete@ugent.be</a></p>
+      </div>
+      <div>
+        <p><strong>Elsewhere</strong><br>
+        <a href="https://quantumghent.github.io/">QuantumGroup@UGent</a><br>
+        <a href="https://www.maths.cam.ac.uk/person/fv285">DAMTP profile</a><br>
+        <a href="https://en.wikipedia.org/wiki/Frank_Verstraete">Wikipedia</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="sans">
+  <div class="wrap">
+    Frank Verstraete &middot; Cambridge &amp; Ghent.
+  </div>
+</footer>
+
+</body>
+</html>
