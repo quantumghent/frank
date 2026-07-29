@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Nobody Understands Quantum Physics — Frank Verstraete &amp; Céline Broeckaert</title>
+<meta name="description" content="Why Nobody Understands Quantum Physics, by Frank Verstraete and Céline Broeckaert. The story of the science that shapes our world — published in eight languages.">
+<style>
+  :root{
+    --bg:#0e1420; --bg2:#131c2c; --ink:#eef2f7; --soft:#aab6c6;
+    --gold:#d4a95a; --teal:#57c4c0; --rule:#243349;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.65; font-size:17px;
+  }
+  .serif{font-family:Georgia,'Times New Roman',serif;}
+  a{color:var(--teal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 24px;}
+
+  header{padding:18px 0; border-bottom:1px solid var(--rule);}
+  header .wrap{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;}
+  header .home a{color:var(--soft); font-size:.9rem;}
+  nav a{margin-left:1.3em; font-size:.9rem; color:var(--soft);}
+
+  .hero{padding:70px 0 60px; background:
+    radial-gradient(1200px 500px at 70% -10%, #1c2a40 0%, transparent 60%);}
+  .hero .wrap{display:flex; gap:56px; align-items:center; flex-wrap:wrap;}
+  .cover{
+    width:270px; min-width:230px; aspect-ratio:2/3; background:#1b283c;
+    border:1px solid #34496a; display:flex; align-items:center; justify-content:center;
+    text-align:center; padding:24px; color:#cfe0ee;
+    box-shadow: 18px 22px 0 rgba(0,0,0,.35);
+  }
+  .cover img{width:100%; height:100%; object-fit:cover; display:block;}
+  .hero h1{font-size:2.7rem; line-height:1.12; font-weight:normal; max-width:12em;}
+  .hero h1 em{color:var(--gold); font-style:normal;}
+  .hero .sub{margin-top:.7em; color:var(--soft); font-size:1.15rem;}
+  .hero .authors{margin-top:1.2em; font-size:1.05rem; letter-spacing:.04em;}
+  .badges{margin-top:1.6em; display:flex; gap:12px; flex-wrap:wrap;}
+  .badge{
+    border:1px solid var(--gold); color:var(--gold); border-radius:2px;
+    font-size:.8rem; padding:.35em .8em; letter-spacing:.03em;
+  }
+
+  section{padding:52px 0; border-top:1px solid var(--rule);}
+  h2{font-weight:normal; font-size:1.7rem; margin-bottom:.9em;}
+  h2 span{color:var(--gold);}
+  .prose{max-width:42em; color:#dfe6ee;}
+  .prose p{margin-bottom:1em;}
+
+  blockquote{
+    margin:1.8em 0; padding-left:1.2em; border-left:3px solid var(--gold);
+    font-size:1.25rem; line-height:1.5; max-width:32em; color:#f4ead6;
+  }
+  blockquote footer{margin-top:.5em; font-size:.85rem; color:var(--soft); font-family:inherit;}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:22px;}
+  .tr{
+    background:var(--bg2); border:1px solid var(--rule); padding:12px;
+    text-align:center;
+  }
+  .tr .slot{
+    position:relative; aspect-ratio:2/3; background:#10192a;
+    border:1px solid var(--rule); margin-bottom:.7em; overflow:hidden;
+  }
+  .tr .slot .lang{
+    position:absolute; inset:0; display:flex; align-items:center;
+    justify-content:center; color:#5c6f8a; font-size:.8rem;
+  }
+  .tr .slot a{position:relative; display:block; width:100%; height:100%;}
+  .tr .slot img{
+    position:relative; width:100%; height:100%; object-fit:contain;
+    display:block; transition:transform .18s ease;
+  }
+  .tr:hover .slot img{transform:scale(1.04);}
+  .tr .cap{font-size:.85rem; color:var(--soft); line-height:1.45;}
+
+  .buy{display:flex; gap:16px; flex-wrap:wrap; margin-top:1.4em;}
+  .buy a{
+    border:1px solid var(--teal); color:var(--teal); padding:.6em 1.2em;
+    border-radius:2px; font-size:.95rem;
+  }
+  .buy a:hover{background:var(--teal); color:var(--bg); text-decoration:none;}
+
+  ul.events{list-style:none; max-width:44em;}
+  ul.events li{
+    padding:.9em 0; border-bottom:1px solid var(--rule); display:flex; gap:1.5em;
+    font-size:.97rem;
+  }
+  ul.events .d{color:var(--gold); min-width:7.5em; font-size:.85rem; padding-top:.15em;}
+
+  footer.page{border-top:1px solid var(--rule); padding:30px 0 50px; color:#7285a0; font-size:.85rem;}
+  @media (max-width:700px){ .hero h1{font-size:2rem;} .hero .wrap{gap:32px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="home"><a href="../">&larr; Frank Verstraete</a></div>
+    <nav>
+      <a href="#about">The book</a>
+      <a href="#translations">Translations</a>
+      <a href="#press">Press &amp; events</a>
+      <a href="#buy">Get it</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="cover">
+      <img src="../assets/covers/english.jpg" alt="English cover" onerror="this.remove(); this.parentNode.insertAdjacentText('beforeend','[ drop cover photo at assets/covers/english.jpg ]');">
+    </div>
+    <div>
+      <h1 class="serif">Why <em>Nobody</em> Understands Quantum&nbsp;Physics</h1>
+      <p class="sub serif">The story of the science that shapes our world</p>
+      <p class="authors">FRANK VERSTRAETE &amp; CÉLINE BROECKAERT</p>
+      <div class="badges">
+        <span class="badge">The international bestseller</span>
+        <span class="badge">Published in eight languages</span>
+        <span class="badge">A Waterstones best popular science book of 2025</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="serif">Nobody understands it. <span>That is the point.</span></h2>
+    <div class="prose">
+      <p>
+        The premise of this book is simple: quantum physics is far from incomprehensible.
+        On the contrary — it can be made accessible to all. By understanding a few
+        foundational concepts, such as symmetry, the exclusion principle and the uncertainty
+        principle, anyone can connect with the atomic world: the world that gave us the
+        transistor, the laser and the MRI scanner, that explains why the sun shines and why
+        the table is solid. The inherent complexity and counterintuitive nature of physics
+        must not be used to mystify it — that is precisely the opposite of what a book like
+        this should do.
+      </p>
+      <p>
+        We wrote it together — a physicist and a writer — because neither of us alone could
+        have. It is the story of a handful of stubborn ideas and even more stubborn people,
+        building on each other across a century, igniting revolutions that reshaped our
+        understanding of the world. It ends, naturally, with a party: a hundred years of
+        quantum physics, everyone invited, Planck at the piano, Feynman on the drums, and
+        the cat purring quietly under the table.
+      </p>
+    </div>
+    <blockquote class="serif">
+      “Deftly making the seemingly impenetrable world of quantum physics accessible
+      to ordinary mortals.”
+      <footer>— Waterstones, <em>The Best Popular Science Books of 2025</em></footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="quotes">
+  <div class="wrap">
+    <h2 class="serif">From <span>the book</span></h2>
+    <blockquote class="serif">
+      “Human intuition is a terrible guide in physics.”
+    </blockquote>
+    <blockquote class="serif">
+      “Everything in quantum can be traced back to this experiment. Grasp this, and
+      you’re on your way to understanding (almost) everything.”
+      <footer>— on the double-slit experiment</footer>
+    </blockquote>
+    <blockquote class="serif">
+      “Frank thinks and speaks in mathematics; I think and speak in words.”
+      <footer>— from the writer’s foreword</footer>
+    </blockquote>
+    <blockquote class="serif">
+      “Yet now we see, as both align:<br>
+      a deeper glance rewrites the line.”
+      <footer>— from the poem that opens (and closes) the book</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="translations">
+  <div class="wrap">
+    <h2 class="serif">One book, <span>eight languages</span></h2>
+    <p class="prose" style="margin-bottom:1.6em;">
+      First written in Dutch, now travelling. The blue cat gets around:
+    </p>
+    <div class="grid">
+      <div class="tr"><div class="slot"><span class="lang">Dutch</span><a href="https://www.bol.com/nl/nl/f/waarom-niemand-kwantum-begrijpt/9300000145339574/" target="_blank" rel="noopener"><img src="../assets/covers/cover-1.jpg" alt="Dutch cover: Waarom niemand kwantum begrijpt" onerror="this.remove()"></a></div><div class="cap"><a href="https://www.bol.com/nl/nl/f/waarom-niemand-kwantum-begrijpt/9300000145339574/" target="_blank" rel="noopener"><em>Waarom niemand kwantum begrijpt</em><br>Lannoo, 2023 (the original)</a></div></div>
+      <div class="tr"><div class="slot"><span class="lang">English</span><a href="https://www.waterstones.com/book/why-nobody-understands-quantum-physics/frank-verstraete/c-line-broeckaert/9781035065844" target="_blank" rel="noopener"><img src="../assets/covers/cover-2.jpg" alt="English cover" onerror="this.remove()"></a></div><div class="cap"><a href="https://www.waterstones.com/book/why-nobody-understands-quantum-physics/frank-verstraete/c-line-broeckaert/9781035065844" target="_blank" rel="noopener"><em>Why Nobody Understands Quantum Physics</em><br>Pan Macmillan, 2025</a></div></div>
+      <div class="tr"><div class="slot"><span class="lang">English</span><a href="https://www.waterstones.com/book/why-nobody-understands-quantum-physics/frank-verstraete/c-line-broeckaert/9781035065882" target="_blank" rel="noopener"><img src="../assets/covers/cover-2p.jpg" alt="English paperback" onerror="this.remove()"></a></div><div class="cap"><a href="https://www.waterstones.com/book/why-nobody-understands-quantum-physics/frank-verstraete/c-line-broeckaert/9781035065882" target="_blank" rel="noopener"><em>Paperback</em><br>Pan Macmillan, 2026</a></div></div>
+      <div class="tr"><div class="slot"><span class="lang">German</span><a href="https://www.thalia.de/shop/home/artikeldetails/A1074741597" target="_blank" rel="noopener"><img src="../assets/covers/cover-3.jpg" alt="German cover" onerror="this.remove()"></a></div><div class="cap"><a href="https://www.thalia.de/shop/home/artikeldetails/A1074741597" target="_blank" rel="noopener"><em>Warum niemand die Quantentheorie versteht</em><br>C.H. Beck</a></div></div>
+      <div class="tr"><div class="slot"><span class="lang">French</span><a href="https://www.fnac.com/a21788944/Frank-Verstraete-Pourquoi-personne-ne-comprend-rien-a-la-physique-quantique" target="_blank" rel="noopener"><img src="../assets/covers/cover-4.jpg" alt="French cover" onerror="this.remove()"></a></div><div class="cap"><a href="https://www.fnac.com/a21788944/Frank-Verstraete-Pourquoi-personne-ne-comprend-rien-a-la-physique-quantique" target="_blank" rel="noopener"><em>Pourquoi personne ne comprend rien à la physique quantique</em><br>Éditions Quanto</a></div></div>
+      <div class="tr"><div class="slot"><span class="lang">Italian</span><a href="https://www.lafeltrinelli.it/perche-nessuno-capisce-meccanica-quantistica-libro-frank-verstraete-celine-broeckaert/e/9791256142705" target="_blank" rel="noopener"><img src="../assets/covers/cover-5.jpg" alt="Italian cover" onerror="this.remove()"></a></div><div class="cap"><a href="https://www.lafeltrinelli.it/perche-nessuno-capisce-meccanica-quantistica-libro-frank-verstraete-celine-broeckaert/e/9791256142705" target="_blank" rel="noopener"><em>Perché nessuno capisce la meccanica quantistica</em><br>Castelvecchi, 2025</a></div></div>
+      <div class="tr"><div class="slot"><span class="lang">Korean</span><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373998171" target="_blank" rel="noopener"><img src="../assets/covers/Korean_cover.jpg" alt="Korean cover" onerror="this.remove()"></a></div><div class="cap"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373998171" target="_blank" rel="noopener"><em>최소한의 양자역학</em><br>“The bare minimum of quantum mechanics”<br>Korean edition</a></div></div>
+      <div class="tr"><div class="slot"><span class="lang">Chinese</span><a href="https://book.douban.com/subject/38510816/" target="_blank" rel="noopener"><img src="../assets/covers/Chinese_cover.jpg" alt="Chinese cover" onerror="this.remove()"></a></div><div class="cap"><a href="https://book.douban.com/subject/38510816/" target="_blank" rel="noopener"><em>写给你的量子情诗</em><br>“A quantum love poem, written for you”<br>Chinese (simplified) edition</a></div></div>
+      <div class="tr"><div class="slot"><span class="lang">Spanish</span><img src="../assets/covers/cover-7.jpg" alt="" onerror="this.remove()"></div><div class="cap">Spanish edition</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="press">
+  <div class="wrap">
+    <h2 class="serif">Press <span>&amp; events</span></h2>
+    <ul class="events">
+      <li><span class="d">Oct 2025</span><span>Selected by Waterstones among <a href="https://www.waterstones.com/blog/the-best-popular-science-books-of-2025">the best popular science books of 2025</a>.</span></li>
+      <li><span class="d">2025</span><span>English edition launched at the Royal Institution, London.</span></li>
+      <li><span class="d">Nov 2025</span><span><a href="https://www.newton.ac.uk/">Isaac Newton Institute</a> podcast, <em>episode #72</em>, with Céline Broeckaert and Frank Verstraete.</span></li>
+      <li><span class="d">May 2025</span><span><em>De Standaard</em>: “Why you need to fall in love with quantum physics — before the next revolution.”</span></li>
+      <li><span class="d">Mar 2026</span><span><a href="https://plus.maths.org/content/abstract-nonsense-essential-tool">Plus Magazine</a> on symmetry, phase transitions and abstract nonsense.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="buy">
+  <div class="wrap">
+    <h2 class="serif">Get <span>the book</span></h2>
+    <div class="buy">
+      <a href="https://www.waterstones.com/book/why-nobody-understands-quantum-physics/frank-verstraete/c-line-broeckaert/9781035065844">Waterstones</a>
+      <a href="https://www.panmacmillan.com/authors/frank-verstraete/why-nobody-understands-quantum-physics/9781035065844">Pan Macmillan</a>
+      <a href="https://www.amazon.com/Why-Nobody-Understands-Quantum-Physics/dp/1035065843">Amazon</a>
+      <a href="https://www.amazon.co.uk/dp/1035065886">Amazon.co.uk</a>
+    </div>
+    <p class="prose" style="margin-top:1.6em; color:#93a3b8; font-size:.9rem;">
+      Or, better: your local bookshop.
+    </p>
+  </div>
+</section>
+
+<footer class="page">
+  <div class="wrap">
+    Frank Verstraete &amp; Céline Broeckaert &middot; <a href="../">back to the academic site</a>
+  </div>
+</footer>
+
+</body>
+</html>
